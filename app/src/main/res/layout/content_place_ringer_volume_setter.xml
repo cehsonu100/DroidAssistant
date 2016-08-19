@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".PlaceRingerVolumeSetter"
+    tools:showIn="@layout/activity_place_ringer_volume_setter">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <android.support.design.widget.TextInputLayout
+            style="@style/placeInputStyle"
+            android:layout_marginTop="25dp">
+            <EditText android:id="@+id/place_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Place Name"
+                android:paddingLeft="14dp" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.v7.widget.AppCompatButton
+            style="@style/layoutStyles"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginLeft="12dp"
+            android:drawableLeft="@drawable/icon_location"
+            android:text="Pick Locaton"
+            android:layout_marginTop="12dp"
+            android:id="@+id/placePickerButton"
+            android:onClick="pickPlace"
+            android:gravity="center_vertical|center"
+            android:background="@drawable/gradient_for_button_2"
+            android:layout_marginRight="12dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:layout_marginTop="3dp">
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/placeInputStyle"
+                android:layout_width="124dp"
+                android:layout_height="wrap_content"
+                android:text="Latitude"
+                android:paddingLeft="14dp"
+                android:layout_gravity="right"
+                android:textSize="20dp" />
+            <android.support.v7.widget.AppCompatTextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="14dp"
+                android:textSize="15dp"
+                android:id="@+id/mLatitudeText"
+                android:hint="00.00" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:layout_marginTop="3dp">
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/placeInputStyle"
+                android:layout_width="124dp"
+                android:layout_height="wrap_content"
+                android:text="Longitude"
+                android:paddingLeft="14dp"
+                android:layout_gravity="right"
+                android:textSize="20dp" />
+            <android.support.v7.widget.AppCompatTextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="14dp"
+                android:textSize="15dp"
+                android:id="@+id/mLongitudeText"
+                android:hint="00.00"/>
+        </LinearLayout>
+
+        <android.support.design.widget.TextInputLayout
+            style="@style/placeInputStyle">
+            <EditText android:id="@+id/radius_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Set Radius(in meter)"
+                android:paddingLeft="14dp"
+                android:layout_marginTop="3dp"
+                android:inputType="number" />
+        </android.support.design.widget.TextInputLayout>
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/mode">
+            <android.support.v7.widget.AppCompatRadioButton
+                style="@style/layoutStyles"
+                android:text="Normal"
+                android:id="@+id/normal_mode_rbutton" />
+            <android.support.v7.widget.AppCompatRadioButton
+                style="@style/layoutStyles"
+                android:text="Vibrate"
+                android:id="@+id/vibration_mode_rbutton" />
+            <android.support.v7.widget.AppCompatRadioButton
+                style="@style/layoutStyles"
+                android:text="Silent"
+                android:id="@+id/silent_mode_rbutton" />
+        </RadioGroup>
+
+        <android.support.v7.widget.AppCompatButton
+            style="@style/layoutStyles"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginLeft="12dp"
+            android:text="Add Locaton"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:id="@+id/add_location_button"
+            android:onClick="onAddLocationClicked"
+            android:background="@drawable/gradient_for_button_2"
+            android:layout_marginRight="12dp" />
+
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

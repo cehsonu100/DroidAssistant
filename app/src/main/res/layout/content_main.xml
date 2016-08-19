@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="mydroid.com.droidassistant.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="fill_parent"
+        android:layout_height="420dp"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/view"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="420dp"
+            android:background="#fafafa">
+
+            <android.support.v7.widget.AppCompatButton
+                style="@style/layoutStyles"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="15dp"
+                android:text="Locaton"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:id="@+id/location_show_button"
+                android:onClick="onLocationShowClicked"
+                android:background="@drawable/gradient_for_button"
+                android:textColor="#ffffff" />
+
+            <android.support.v7.widget.AppCompatButton
+                style="@style/layoutStyles"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="15dp"
+                android:text="Reminder"
+                android:layout_marginTop="14dp"
+                android:gravity="center"
+                android:id="@+id/reminder_setter_button"
+                android:background="@drawable/gradient_for_button"
+                android:textColor="#ffffff"
+                android:onClick="onReminderClicked" />
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.AppCompatButton
+        style="@style/layoutStyles"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Show command List"
+        android:gravity="center"
+        android:id="@+id/show_command_list_button"
+
+        android:textColor="#000000"
+        android:onClick="onShowCommandListClicked"
+        android:layout_below="@+id/view"
+        android:layout_centerHorizontal="true"
+        android:background="#e6ee9c" />
+
+</RelativeLayout>
