@@ -1,1 +1,4 @@
 # DroidAssistant
+
+# No longer maintained 
+
